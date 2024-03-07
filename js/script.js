@@ -28,6 +28,6 @@ for(let i = 1; i <= 100; i++) {
     } else if (i % 5 === 0) {
         FizzBuzz = 'Buzz';
     }
-     // Stampare in console
-    console.log(i + ' ' + FizzBuzz);
+     // Stampare in console = 'Fizz' or 'Buzz' or 'FizzBuzz'
+    console.log(FizzBuzz);
 }
