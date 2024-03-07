@@ -6,7 +6,7 @@
 
 #numbers-container {
     width: 960px;
-    background-color: lightcoral;
+    background: radial-gradient(#FFFFFF 0%, #CC0000 100%);
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
