@@ -18,33 +18,35 @@
 // Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 // Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 
+
+// Assegno la variabile numbContainer
+const numbContainer = document.querySelector('#numbers-container');
+
 // Stampare tutti i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
     // Inizializza FizzBuzz come stringa vuota
-    let FizzBuzz;
+    let message;
+    let cssClass;
     // Controlla le condizioni sia per 'Fizz' che per 'Buzz'
     if (i % 3 === 0 && i % 5 === 0) {
-        FizzBuzz = 'fizz';
+        message = 'FizzBuzz';
+        cssClass = 'fizzbuzz';
     }
     else if (i % 5 === 0) {
-        FizzBuzz = 'buzz';
+        message = 'Buzz';
+        cssClass = 'buzz';
     }
     else if (i % 3 === 0) {
-        FizzBuzz = 'fizzbuzz';
+        message = 'Fizz';
+        cssClass = 'fizz';
     }
     else {
-        FizzBuzz = 'none'
-        console.log(i);
+        message = i;
+        cssClass = '';
     }
-    // Stampare in console = 'Fizz' or 'Buzz' or 'FizzBuzz'
-    console.log(FizzBuzz);
-
-
-    // Assegno la variabile numbContainer
-    const numbContainer = document.querySelector('#numbers-container');
 
     // Crea una nuova casella per ogni numero e applica le classi
-    const newBox = `<div class="box ${FizzBuzz}">${i}</div>`;
+    const newBox = `<div class="box ${cssClass}">${message}</div>`;
     numbContainer.innerHTML += newBox;
 }
 
