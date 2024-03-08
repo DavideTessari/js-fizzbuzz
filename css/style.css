@@ -36,3 +36,7 @@
 .fizzbuzz {
     background-color: rebeccapurple;
 }
+
+.none {
+    border: 2px solid yellow;
+}

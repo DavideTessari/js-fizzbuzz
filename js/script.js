@@ -21,13 +21,20 @@
 // Stampare tutti i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
     // Inizializza FizzBuzz come stringa vuota
-    let FizzBuzz = 'fizzbuzz';
+    let FizzBuzz;
     // Controlla le condizioni sia per 'Fizz' che per 'Buzz'
-    if (i % 3 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
         FizzBuzz = 'fizz';
     }
     else if (i % 5 === 0) {
         FizzBuzz = 'buzz';
+    }
+    else if (i % 3 === 0) {
+        FizzBuzz = 'fizzbuzz';
+    }
+    else {
+        FizzBuzz = 'none'
+        console.log(i);
     }
     // Stampare in console = 'Fizz' or 'Buzz' or 'FizzBuzz'
     console.log(FizzBuzz);
